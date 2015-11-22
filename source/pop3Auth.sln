@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pop3Auth", "http://localhost/pop3Auth/pop3Auth.csproj", "{F20D53B2-212C-48CB-9D49-268E0324AD58}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F20D53B2-212C-48CB-9D49-268E0324AD58}.Debug.ActiveCfg = Debug|.NET
+		{F20D53B2-212C-48CB-9D49-268E0324AD58}.Debug.Build.0 = Debug|.NET
+		{F20D53B2-212C-48CB-9D49-268E0324AD58}.Release.ActiveCfg = Release|.NET
+		{F20D53B2-212C-48CB-9D49-268E0324AD58}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

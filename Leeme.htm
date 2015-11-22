@@ -1,0 +1,278 @@
+<html>
+	<head>
+		<title>LEEME DE pop3Auth</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	</head>
+	<body>
+		<center><h3>Léeme del Servicio Web XML "pop3Auth"</h3>
+		</center>
+		<b>Abstracto:</b><br>
+		<ul>
+			pop3Auth es un Servicio Web XML que implementa la lógica e interfaces 
+			necesarias para validar credenciales de usuarios a través del servicio POP3 en 
+			uno o más servidores, es ideal para contar en sus aplicaciones con una forma de 
+			identificar usuarios que no dependa de un servicio de directorio o LDAP 
+			(Lightweight Directory Access Protocol) ó de la implementación de una base de 
+			datos personalizada con este fin.<br>
+			Este Servicio Web XML se ha hecho tanto com propósitos educativos como 
+			productivos y con la intención de que se pueda hospedar tanto en el servidor 
+			HTTP de sistemas operativos Microsoft Windows 2000 o superior (Internet 
+			Information Server) como en Apache para Linux de aquellas distribuciones para 
+			las cuales existan los correspondientes paquetes de instalación del proyecto 
+			Mono. Se ha programado utilizando Microsoft Visual Studio.Net 2003 con las 
+			librerías del .Net Framework versión 1.1.4322, pero es compatible también con 
+			la versión 2.0.50727, o sea que los paquetes de instalación del proyecto Mono 
+			necesarios para su funcionamiento en la plataforma Linux existen desde hace ya 
+			algún tiempo. Se ha probado tanto en sistemas operativos Microsoft Windows 2000 
+			y 2003 como en las siguientes distribuciones de Linux: RedHat, CentOS, Mandrake 
+			y Fedora.
+		</ul>
+		<b>Herramientas y tecnologías para su desarrollo:</b>
+		<ul>
+			Se ha utilizado Microsoft Visual Studio.Net 2003 como entorno integrado de 
+			desarrollo (IDE) y como lenguaje de programación C#, la librería utilizada ha 
+			sido el .Net Framework de Microsoft versión 1.1.4322. Por ser un Servicio Web 
+			XML que responde a la implementación para los Frameworks mencionados se emplean 
+			también las siguientes tecnologías: SOAP (Simple Object Access Protocol), XML 
+			(Extensible Markup Language) y HTTP (Hypertext Transfer Protocol) y TCP/IP 
+			(Transfer Control Protocol/Internet Protocol).
+		</ul>
+		<b>Componentes utilizados que se consideran ajenos a las tecnologías de los 
+			Servicios Web XML:</b>
+		<ul>
+			Servidor POP (Post Office Protocol) según el <a target="_blank" href="http://www.faqs.org/rfcs/rfc1939.html">
+				RFC821</a>.
+		</ul>
+		<b>Requerimientos:</b>
+		<ul>
+			<i>Sistema Operativo:</i>
+			<ul>
+				<li>
+					Cualquier sistema operativo para el cual exista un implementación el Microsoft 
+					.Net Framework, lo cual incluye las siguientes plataformas hasta ahora: 
+					Microsoft Windows, Linux, Solaris, Mac OS X, FreeBSD y Unix.
+				</li>
+			</ul>
+			<i>Servidor HTTP:</i>
+			<ul>
+				<li>
+				Microsoft IIS (Internet Information Server).
+				<li>
+					Apache (para Linux).
+				</li>
+			</ul>
+			<i>Librerías de software:</i>
+			<ul>
+				<li>
+					<a target="_blank" href="ftp://ftp.cf.minaz.cu/programadores/librerias/dotnetframeworks/microsoft/v1.1.4322/">
+						Microsoft .Net Framework 1.1.4322</a>
+				ó superior, para hospedarse sobre Microsoft Windows.
+				<li>
+					<a target="_blank" href="http://www.mono-project.com/Downloads">Framework del 
+						proyecto Mono</a>, para hospedarse sobre Apache para Linux.
+				</li>
+			</ul>
+			<i>Otros:</i>
+			<ul>
+				<li>
+					Servidor de POP accesible mediante protocolo TCP/IP.
+				</li>
+			</ul>
+		</ul>
+		<b>Distribución:</b>
+		<ul>
+			<i>Fuentes: <a href="ftp://ftp.cf.minaz.cu/programadores/ideas/free-soft_development/XML-Web-Services/pop3Auth/source/">
+					source_pop3Auth</a></i>
+			<ul>
+				<li>
+					Las fuentes se proporcionan con el objetivo de facilitar el comienzo de 
+					aquellos que han decidido adentrarse en el uso de estas tecnologías y también 
+					para que quienes ya tiene experiencia puedan proporcinar nuevas ideas u ofrecer 
+					soluciones a problemas que se le presenten con lo distribuido. Por favor, 
+					sírvase enviar sus dudas o comentarios a: <a href="mailto:leskyam@cf.minaz.cu?subject=Feedback pop3Auth">
+						Lesky Alfonso M.</a> ó puede hacer uso del <a href="http://www.minaz.cu/forum">foro 
+						del MINAZ</a>.
+				</li>
+			</ul>
+			<i>Aplicación: <a href="ftp://ftp.cf.minaz.cu/programadores/ideas/free-soft_development/XML-Web-Services/pop3Auth/app/">
+					app_pop3Auth</a></i>
+			<ul>
+				<li>
+					El contenido de aplicación son los ficheros estrítamente necesarios para la 
+					ejecución de la aplicación.
+				</li>
+			</ul>
+		</ul>
+		<b>Implementación:</b>
+		<ul>
+			<i>Microsoft Internet Information Server:</i>
+			<ul>
+				<li>
+					Instalación de <a target="_blank" href="ftp://ftp.cf.minaz.cu/programadores/librerias/dotnetframeworks/microsoft/v1.1.4322/">
+						Microsoft .Net Framework 1.1.4322</a>
+				<li>
+					Configuración de un "Directorio virtual" en el IIS cuya localización física 
+					almacenará los ficheros del <a target="_blank" href="ftp://ftp.cf.minaz.cu/programadores/ideas/free-soft_development/XML-Web-Services/pop3Auth/app/">
+						Servicio Web XML pop3Auth</a>.
+				<li>
+					Configuración, en el fichero Web.config que se incluye en el <a target="_blank" href="ftp://ftp.cf.minaz.cu/programadores/ideas/free-soft_development/XML-Web-Services/pop3Auth/app/">
+						Servicio Web XML pop3Auth</a>, del o los servidores de POP3 que se necesiten 
+					emplear.</li>
+			</ul>
+			<i>Apache para Linux:</i>
+			<ul>
+				<li>
+					Instalación de la correspondiente <a target="_blank" href="http://www.mono-project.com/Downloads">
+						librería de Mono</a>
+				según la distribución de Linux empleada.
+				<li>
+				Configuración de un "Alias" para la aplicación en el fichero "httpd.conf". 
+				Ejemplo: &lt;Alias /pop3Auth "/etc/httpd/XMLWebServices/pop3Auth"&gt;
+				<li>
+					Configuración, en el fichero Web.config que se incluye en el <a target="_blank" href="ftp://ftp.cf.minaz.cu/programadores/ideas/free-soft_development/XML-Web-Services/pop3Auth/app/">
+						Servicio Web XML pop3Auth</a>, del o los servidores de POP3 que se necesiten 
+					emplear.</li>
+			</ul>
+		</ul>
+		<b>Prueba:</b>
+		<ul>
+			Abrir un navegador Web, teclear en la barra de direcciones del mismo la URL que 
+			corresponda a la localización donde se configuró el Servicio Web XML y leer 
+			detenidamente la descripción de cada uno de los métodos que aparecen para 
+			determinar cuál se necesita probar.
+		</ul>
+		<b>Especificaciones del funcionamiento:</b>
+		<ul>
+			<i>Generales:</i>
+			<ul>
+				El Servicio Web XML pop3Auth cuenta en su interface pública con dos métodos 
+				llamados "LogonToSpecificServer" y "LogonToServersInConfig", cada uno de ellos 
+				tiene el mismo objetivo, y devuelve el mismo tipo de datos para operaciones de 
+				identificación de usuario fallidas y satisfactorias pero reciben distinto 
+				número de parámetros como se muestra en las especificacines de cada uno de 
+				ellos a continuación.
+			</ul>
+			<i>Interfaces pública:</i>
+			<ul>
+				&lt;LogonToSpecificServer&gt;
+				<ul>
+					Parámetros de entrada:
+					<ul>
+						<li>
+							POP3Server: una cadena que representa el nombre o la dirección IP de un 
+							servidor POP3 accesible que se va a utilizar para validar las credenciales del 
+							usuario que proporciona los datos a través de la aplicación que se considera 
+							cliente de este Servicio Web XML.
+						</li>
+						<li>
+							Port: un valor de tipo entero que representa el puerto por donde estará 
+							escuchando las peticiones el servidor POP3 en cuestión, normalmente el puerto 
+							110.
+						</li>
+						<li>
+							userEmail: una cadena que representa la dirección electrónica del usuario que, 
+							haciendo uso de la aplicación que se considera cliente de este Servicio Web 
+							XML, está intentando ser identificado por el servidor POP3 en cuestión.
+						</li>
+						<li>
+							userPassword: una cadena que representa la contraseña del usuario que, haciendo 
+							uso de la aplicación que se considera cliente de este Servicio Web XML, está 
+							intentando ser identificado por el servidor POP3 en cuestión.
+						</li>
+					</ul>
+					Parámetros de salida:
+					<ul>
+						<li>
+							True (verdadero): En caso de ser identificado el usuario de manera correcta.
+						</li>
+						<li>
+							False (falso): En caso de no estar correctas las credenciales del usuario.
+						</li>
+					</ul>
+					Excepciones (Errores):
+					<ul>
+						Nota.<br>
+						Las excepciones para este procedimiento se procesan a través de una clase 
+						personalizada llamada "pop3Exception" y se generaran bajo las siguientes 
+						circunstancias:
+						<li>
+							Imposible conectar con el servidor POP3 especificado.
+						</li>
+						<li>
+							Error al enviar el comando USER al servidor.
+						</li>
+					</ul>
+				</ul>
+				&lt;LogonToServersInConfig&gt;
+				<ul>
+					Nota.<br>
+					En este caso el nombre del servidor y su respectivo puerto para el servicio 
+					POP3 se tomarán del fichero de configuración "Web.config" perteneciente a este 
+					Servicio Web XML.<br>
+					Parámetros de entrada:
+					<ul>
+						<li>
+							userEmail: una cadena que representa la dirección electrónica del usuario que, 
+							haciendo uso de la aplicación que se considera cliente de este Servicio Web 
+							XML, está intentando ser identificado por el servidor POP3 en cuestión.
+						</li>
+						<li>
+							userPassword: una cadena que representa la contraseña del usuario que, haciendo 
+							uso de la aplicación que se considera cliente de este Servicio Web XML, está 
+							intentando ser identificado por el servidor POP3 en cuestión.
+						</li>
+					</ul>
+					Parámetros de salida:
+					<ul>
+						<li>
+							True (verdadero): En caso de ser identificado el usuario de manera correcta.
+						</li>
+						<li>
+							False (falso): En caso de no estar correctas las credenciales del usuario.
+						</li>
+					</ul>
+					Excepciones (Errores):
+					<ul>
+						Nota.<br>
+						Las excepciones para este procedimiento se procesan a través de una clase 
+						personalizada llamada "pop3Exception" y también de otras clases propias del 
+						framework; se generaran bajo las siguientes circunstancias:
+						<li>
+							Imposible conectar con el servidor POP3 especificado.
+						</li>
+						<li>
+							Error al enviar el comando USER al servidor.
+						</li>
+						<li>
+							Errores en el fichero de configuración "Web.config" como son: la no existencia 
+							del a llave "pop3Servers" o la ausencia de valor para esta, la aparición 
+							malformada del nombre o dirección IP del servidor y/o del puerto para 
+							cualquiera de los servidores POP3 que se configuren en el fichero de 
+							configuración.
+						</li>
+					</ul>
+				</ul>
+			</ul>
+		</ul>
+		<b>Recursos de interés:</b>
+		<ul>
+			<li>
+				<a target="_blank" href="ftp://ftp.cf.minaz.cu/programadores/Documentacion/dotnetframework/XML-Web-Services/">Documentación 
+					sobre Servicios Web XML</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://www.go-mono.com/docs/">Documentación y Manuales 
+					de Mono</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://www.mono-project.com/Screenshots/">Screenshots de 
+					Mono</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://www.go-mono.com/monologue/">Blogs de 
+					Mono</a>
+			</li>
+		</ul>
+		<center><b>Autor:</b> Lesky Alfonso M. TEICO - Cienfuegos.</center>
+	</body>
+</html>
